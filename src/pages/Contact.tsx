@@ -40,13 +40,13 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="py-20 bg-beige-light">
-        <div className="section-container">
+      <section className="py-12 md:py-20 bg-beige-light">
+        <div className="section-container max-w-6xl mx-auto px-4 sm:px-6">
           <SectionTitle title="Contactez-moi" />
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="font-playfair text-2xl font-semibold text-gray-dark mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 mt-8 md:mt-10">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+              <h3 className="font-playfair text-xl md:text-2xl font-semibold text-gray-dark mb-4 md:mb-6">
                 Parlons de vos besoins
               </h3>
               <p className="text-gray-dark mb-6">
@@ -54,7 +54,7 @@ const Contact = () => {
                 Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
               </p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-dark mb-1">
                     Nom complet
@@ -66,7 +66,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-powder"
+                    className="w-full px-4 py-2 md:py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-powder"
                     placeholder="Votre nom"
                   />
                 </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-powder"
+                    className="w-full px-4 py-2 md:py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-powder"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -97,8 +97,8 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-powder"
+                    rows={4}
+                    className="w-full px-4 py-2 md:py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-powder"
                     placeholder="Comment puis-je vous aider ?"
                   ></textarea>
                 </div>
@@ -111,32 +111,32 @@ const Contact = () => {
               </form>
             </div>
             
-            <div className="flex flex-col justify-center space-y-8">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="font-playfair text-2xl font-semibold text-gray-dark mb-6">
+            <div className="flex flex-col justify-between space-y-4 md:space-y-6">
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                <h3 className="font-playfair text-xl md:text-2xl font-semibold text-gray-dark mb-4 md:mb-6">
                   Contact direct
                 </h3>
                 
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-rose-powder/20 p-3 rounded-full">
-                      <Mail className="h-6 w-6 text-rose-powder" />
+                <div className="space-y-4 md:space-y-6">
+                  <div className="flex items-center space-x-3 md:space-x-4">
+                    <div className="bg-rose-powder/20 p-2 md:p-3 rounded-full">
+                      <Mail className="h-5 w-5 md:h-6 md:w-6 text-rose-powder" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-dark font-medium">Email</p>
-                      <a href="mailto:tilleventsbym@gmail.com" className="text-gray-dark hover:text-rose-powder transition-colors">
+                      <p className="text-xs md:text-sm text-gray-dark font-medium">Email</p>
+                      <a href="mailto:tilleventsbym@gmail.com" className="text-sm md:text-base text-gray-dark hover:text-rose-powder transition-colors">
                         tilleventsbym@gmail.com
                       </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-rose-powder/20 p-3 rounded-full">
-                      <Phone className="h-6 w-6 text-rose-powder" />
+                  <div className="flex items-center space-x-3 md:space-x-4">
+                    <div className="bg-rose-powder/20 p-2 md:p-3 rounded-full">
+                      <Phone className="h-5 w-5 md:h-6 md:w-6 text-rose-powder" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-dark font-medium">WhatsApp</p>
-                      <a href="https://wa.me/33672093843" className="text-gray-dark hover:text-rose-powder transition-colors">
+                      <p className="text-xs md:text-sm text-gray-dark font-medium">WhatsApp</p>
+                      <a href="https://wa.me/33672093843" className="text-sm md:text-base text-gray-dark hover:text-rose-powder transition-colors">
                         06 72 09 38 43
                       </a>
                     </div>
@@ -144,18 +144,18 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="font-playfair text-xl font-semibold text-gray-dark mb-4">
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                <h3 className="font-playfair text-lg md:text-xl font-semibold text-gray-dark mb-3 md:mb-4">
                   Service 100% digital
                 </h3>
-                <p className="text-gray-dark">
+                <p className="text-sm md:text-base text-gray-dark">
                   Basée en Espagne, je vous propose un accompagnement entièrement à distance, 
                   efficace et réactif, quelle que soit votre localisation.
                 </p>
               </div>
               
-              <div className="bg-rose-powder/10 p-8 rounded-lg border border-rose-powder/30">
-                <p className="text-gray-dark text-center italic">
+              <div className="bg-rose-powder/10 p-6 md:p-8 rounded-lg border border-rose-powder/30">
+                <p className="text-sm md:text-base text-gray-dark text-center italic">
                   "Déléguez, respirez, avancez !"
                 </p>
               </div>
