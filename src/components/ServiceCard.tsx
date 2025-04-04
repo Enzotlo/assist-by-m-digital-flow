@@ -11,7 +11,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, description, icon, className }: ServiceCardProps) => {
   return (
     <div className={cn(
-      "bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300",
+      "bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-transparent hover:border-rose-powder/20",
       className
     )}>
       <div className="flex items-center justify-center w-16 h-16 rounded-full bg-rose-powder/20 text-rose-powder mb-6 mx-auto">

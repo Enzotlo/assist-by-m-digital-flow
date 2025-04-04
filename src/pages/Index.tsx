@@ -10,13 +10,15 @@ import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import SectionTitle from '@/components/SectionTitle';
 import PrimaryButton from '@/components/PrimaryButton';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-beige-light/90 z-0"></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80')", filter: "brightness(0.3)" }}></div>
+        <div className="absolute inset-0 bg-beige-light/60 backdrop-blur-sm z-0"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-fade-in">
             <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-gray-dark leading-tight mb-6">
@@ -77,6 +79,32 @@ const Index = () => {
                 Voir tous mes services
               </button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Section */}
+      <section className="py-16 bg-beige-light">
+        <div className="section-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="font-playfair text-3xl font-semibold text-gray-dark mb-4">
+                Une organisation impeccable pour votre tranquillité d'esprit
+              </h2>
+              <p className="text-lg text-gray-dark">
+                Faites confiance à mon expertise pour mettre de l'ordre dans votre quotidien professionnel et personnel. 
+                Avec Assist by M, vous bénéficiez d'un accompagnement personnalisé qui s'adapte parfaitement à vos besoins spécifiques.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <AspectRatio ratio={4/3}>
+                <img 
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" 
+                  alt="Organisation et productivité" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>
